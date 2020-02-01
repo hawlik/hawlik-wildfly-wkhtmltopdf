@@ -10,3 +10,7 @@ RUN \
     yum -y install wkhtmltox-0.12.5-1.centos7.x86_64.rpm
 
 USER jboss
+
+EXPOSE 8080
+
+CMD ["/opt/jboss/wildfly/bin/standalone.sh", "-b", "0.0.0.0"]
