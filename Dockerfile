@@ -2,6 +2,10 @@ FROM jboss/wildfly:18.0.1.Final
 
 USER root
 # dependancies
+
+RUN echo "Europe/Warsaw" > /etc/timezone
+RUN dpkg-reconfigure -f noninteractive tzdata
+
 RUN yum install -y wget
 
 # install wkhtmltopdf
