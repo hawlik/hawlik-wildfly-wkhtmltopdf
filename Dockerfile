@@ -3,7 +3,7 @@ FROM jboss/wildfly:18.0.1.Final
 USER root
 
 # timezone
-RUN unlink /etc/timezone && /usr/share/zoneinfo/Europe/Warsaw /etc/localtime
+RUN ln -s /usr/share/zoneinfo/Europe/Warsaw /etc/localtime
 
 #install wget
 RUN yum install -y wget
