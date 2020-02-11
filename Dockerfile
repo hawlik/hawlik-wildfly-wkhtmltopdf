@@ -1,11 +1,11 @@
 FROM jboss/wildfly:18.0.1.Final
 
 USER root
-# dependancies
 
-RUN echo "Europe/Warsaw" > /etc/timezone
-RUN dpkg-reconfigure -f noninteractive tzdata
+# timezone
+RUN unlink /etc/timezone && /usr/share/zoneinfo/Europe/Warsaw /etc/localtime
 
+#install wget
 RUN yum install -y wget
 
 # install wkhtmltopdf
