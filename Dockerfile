@@ -11,7 +11,7 @@ RUN yum install -y wget
 # install wkhtmltopdf
 RUN \
     wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox-0.12.6-1.centos7.x86_64.rpm && \
-    yum -y install wkhtmltox-0.12.5-1.centos7.x86_64.rpm
+    yum -y install wkhtmltox-0.12.6-1.centos7.x86_64.rpm
 
 USER jboss
 
