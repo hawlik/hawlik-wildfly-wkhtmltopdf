@@ -4,7 +4,7 @@ USER root
 
 # timezone
 RUN unlink /etc/localtime && ln -s /usr/share/zoneinfo/Europe/Warsaw /etc/localtime
-
+RUN microdnf install -y yum
 #install wget
 RUN yum install -y wget
 
