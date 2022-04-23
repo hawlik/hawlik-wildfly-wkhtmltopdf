@@ -1,4 +1,4 @@
-FROM jboss/wildfly:23.0.2.Final
+FROM hawlik/wildfly:latest
 
 USER root
 
@@ -10,8 +10,8 @@ RUN yum install -y wget
 
 # install wkhtmltopdf
 RUN \
-    wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox-0.12.6-1.centos7.x86_64.rpm && \
-    yum -y install wkhtmltox-0.12.6-1.centos7.x86_64.rpm
+    wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox-0.12.6-1.centos8.x86_64.rpm && \
+    yum -y install wkhtmltox-0.12.6-1.centos8.x86_64.rpm
 
 USER jboss
 
