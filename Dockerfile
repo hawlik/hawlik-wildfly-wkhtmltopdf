@@ -17,4 +17,4 @@ USER wildfly
 
 EXPOSE 8080
 
-CMD ["run.sh"]
+CMD ["/run.sh"]
